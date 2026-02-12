@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TOP</title>
+		<link rel="icon" href="https://files.catbox.moe/swqnzt.png">
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+	</head>
+	<body>
+		<div class="contains">
+			<h1>今日は何する？</h1>
+			<input id="inp" type="text" placeholder="何か調べる？">
+			<button class="sb" id="btn">検索</button>
+			<p class="jser" id="jserror"></p>
+			<h2>それともサイトに飛ぶ？</h2>
+			<button class="lb" onclick="location.href='https://www.google.com/'">Google</button>
+			<button class="lb" onclick="location.href='https://www.yahoo.co.jp/'">Yahoo! JAPAN</button>
+			<button class="lb" onclick="location.href='https://www.youtube.com/'">Youtube</button>
+		</div>
+		<script>
+			const input = document.getElementById("inp");
+			const button = document.getElementById("btn");
+			const element = document.getElementById("jserror");
+
+			function performSearch() {
+				const query = inp.value.trim();
+
+				if (query === "") {
+					element.textContent = "何かしらは入力してよ～";
+					return;
+				}
+
+				const encodedQuery = encodeURIComponent(query);
+				const url = `https://www.ecosia.org/search?q=${encodedQuery}`;
+
+				window.location.href = url;
+			}
+
+			button.addEventListener("click", performSearch);
+
+			// Enterキーでも検索できるようにする
+			input.addEventListener("keydown", function(event) {
+				if (event.key === "Enter") {
+					performSearch();
+				}
+			});
+		</script>
+	</body>
+</html>

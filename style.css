@@ -1,0 +1,80 @@
+body {
+	color: #fff;
+	background: hsl(227, 10%, 10%);
+	font: 'NotoSansJapanese';
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 100vh;
+	display: flex;
+}
+
+input, button {
+	background-color: transparent;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	color: inherit;
+	appearance: none;
+	font-size: 1em;
+	line-height: 1.2;
+	padding: 0.5em var(--padding-x);
+	border-width: 2px;
+	border-style: solid;
+}
+
+input {
+	background-color: white;
+	--padding-x: 0.5em;
+	border-color: hsl(240, 1%, 83%);
+	border-radius: 0.25em;
+
+	color: hsl(240, 4%, 20%);
+
+	transition: .2s;
+}
+
+input:hover {
+	border-color: hsl(220, 90%, 56%);
+	transform: scale(1.1);
+}
+
+input:focus {
+	border-color: hsl(220, 90%, 56%);
+	transform: scale(1.1);
+	border-width: 5px;
+	outline: none;
+	box-shadow: 0 0 0 2px hsla(220, 90%, 56%, 0.2);
+}
+
+button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	--padding-x: 1.2em;
+	border-color: transparent;
+	border-radius: 0.25em;
+	box-shadow: 0 1px 4px hsla(220, 90%, 37%, 0.25);
+	color: black;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	transition: .1s;
+}
+
+.sb:hover {
+	color: white;
+	background-color: hsl(220, 90%, 56%);
+	transform: scale(1.1);
+}
+
+.lb:hover {
+	color: white;
+	background-color: hsl(0, 100%, 56%);
+	transform: scale(1.1);
+}
+
+.jser {
+	color: red;
+}
