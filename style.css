@@ -69,9 +69,21 @@ button {
 	transform: scale(1.1);
 }
 
+.gb:hover {
+	color: white;
+	background: linear-gradient(90deg, #4285f4 0%, #4285f4 25%, #ea4335 25%, #ea4335 50%, #fbbc05 50%, #fbbc05 75%, #34a853 75%, #34a853 100%);
+	transform: scale(1.1);
+}
+
 .lb:hover {
 	color: white;
-	background-color: hsl(0, 100%, 56%);
+	background-color: hsl(227, 10%, 10%);
+	transform: scale(1.1);
+}
+
+.yb:hover {
+	color: white;
+	background-color: red;
 	transform: scale(1.1);
 }
 
